@@ -15,56 +15,36 @@ defineProps(['data'])
             </h2>
         </template>
 
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 bg-white border-b border-gray-200">
-                        You're logged in!
-
-                        
-                        <div>
-                            <!-- Table -->
-                            <div class="flex flex-col">
-                                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                                    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-                                    <div class="overflow-hidden">
-                                        <table class="min-w-full w-full">
-                                            <thead class="bg-white border-b">
-                                                <tr>
-                                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                                        #
-                                                    </th>
-                                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                                        Name
-                                                    </th>
-                                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                                        Email
-                                                    </th>
-                                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                                        Actions
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                        <tbody>
-                                            <tr v-for="(item, index) in data" class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                                                <td v-text="index + 1" class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"></td>
-                                                <td v-text="item.name" class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                                                <td v-text="item.email" class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                    @mdo
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                        </table>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div>
+                <!-- Table -->
+                <table class="min-w-full w-full">
+                    <thead class="bg-white border-b">
+                        <tr>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                #
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                Name
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                Email
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                Actions
+                            </th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <tr v-for="(item, index) in data" class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td v-text="index + 1" class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"></td>
+                        <td v-text="item.name" class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                        <td v-text="item.email" class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            @mdo
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
         </div>
     </AppLayout>
 </template>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Foundation\Application;
@@ -24,6 +25,7 @@ Route::get('/dashboard', function () {
 
 Route::prefix('app')->name('app.')->middleware(['auth'])->group( function () {
     Route::resource('users', UserController::class);
+    Route::resource('members', MemberController::class);
 });
 
 

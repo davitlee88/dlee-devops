@@ -4,8 +4,9 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/inertia-vue3';
+import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import Navigation from '@/Components/Navigation.vue'
 
 const showingNavigationDropdown = ref(false);
 </script>
@@ -26,14 +27,7 @@ const showingNavigationDropdown = ref(false);
                             </div>
 
                             <!-- Navigation Links -->
-                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
-                                </NavLink>
-                                <NavLink :href="route('app.users.index')" :active="route().current('app.users*')">
-                                    Users
-                                </NavLink>
-                            </div>
+                            <Navigation />
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -106,7 +100,15 @@ const showingNavigationDropdown = ref(false);
 
             <!-- Page Content -->
             <main>
-                <slot />
+                <div class="py-12">
+                    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                            <div class="p-6 bg-white border-b border-gray-200">
+                            <slot />
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
