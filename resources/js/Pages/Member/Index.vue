@@ -1,16 +1,16 @@
 <template>
-    <AppLayout>
+    <AppLayout >
         
-        <template #header>
+        <template #header class="bg-red">
             Member Management
         </template>
         
         <div>
-                <table class="min-w-full w-full bg-red">
+                <table class="min-w-full w-full bg-green">
                     <thead class="bg-white border-b">
                         <tr>
                             <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                #
+                                NO
                             </th>
                             <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                                 Name
