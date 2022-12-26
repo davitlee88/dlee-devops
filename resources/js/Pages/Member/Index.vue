@@ -7,7 +7,7 @@
             </h2>
         </template>
 
-        <section class="mb-10 bg-indigo-200">
+        <section class="mb-10 bg-gradient-to-r from-indigo-200 via-red-400 to-yellow-300">
             <h2 class="text-3xl text-center">Spacing</h2>
             <div class="m-12">Margin</div>
             <div Class="p-8">Pedding</div>
