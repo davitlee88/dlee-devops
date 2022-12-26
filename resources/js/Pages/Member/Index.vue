@@ -1,41 +1,39 @@
 <template>
     <AppLayout >
         
-        <template #header class="bg-red">
+        <template #header>
+            <h2 class="font-serif text-xl text-lime-900">
             Member Management
+            </h2>
         </template>
-        
-        <div>
-                <table class="min-w-full w-full bg-green">
-                    <thead class="bg-white border-b">
-                        <tr>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                NO
-                            </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                Name
-                            </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                Email
-                            </th>
-                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                Actions
-                            </th>
-                        </tr>
-                    </thead>
-                <tbody>
-                    <tr v-for="(item, index) in data" class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                        <td v-text="index + 1" class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"></td>
-                        <td v-text="item.name" class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        <td v-text="item.email" class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            @mdo
-                        </td>
-                    </tr>
-                </tbody>
-                </table>
-        </div>
 
+        <section class="mb-10 bg-indigo-200">
+            <h2 class="text-3xl text-center">Spacing</h2>
+            <div class="m-12">Margin</div>
+            <div Class="p-8">Pedding</div>
+        </section>
+
+        <section class="mb-10 bg-green-200">
+            <h2 class="text-3xl text-center">Sizing</h2>
+            <div class="w-32 h-32">Kotak 1</div>
+        </section>
+
+        <section class="mb-96 font-serif max-w-3xl mx-auto">
+            <h2 class="mb-2 text-4xl font-bold">Belajar Typography pada tailwindSCC</h2>
+            <div class="mb-4 text-lg text-gray-500">
+                By <a href="#" class="text-gray-700 font-semibold">Sri Lelita</a>, 26 Desember 2022
+            </div>
+            <p class="mb-4">
+                Lorem ipsum dolor sit amet <a href="#" class="underline font-semibold text-blue-600">consectetur</a> adipisicing elit. At velit possimus voluptatibus odio ducimus deserunt, repudiandae dicta, id quaerat aliquam, atque fuga quia maxime nesciunt rem veritatis officia delectus? Id eos ad odit illum magni tempore inventore, delectus repudiandae minima ducimus sit, quam doloribus, sunt aliquam. Beatae quia esse illum.
+            </p>
+            <blockquote class="mb-4 italic font-thin text-xl">
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quaerat consequatur accusantium inventore dignissimos totam, eveniet possimus quas praesentium molestias?"
+            </blockquote>
+            <p class="mb-4">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate sint nisi incidunt voluptatibus. Quis ratione officia sed, quasi mollitia at obcaecati amet, non quas, atque dolorum totam numquam et omnis?
+            </p>
+        </section>
+        
     </AppLayout>
 </template>
 
